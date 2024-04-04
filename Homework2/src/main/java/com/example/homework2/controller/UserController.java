@@ -1,30 +1,58 @@
 package com.example.homework2.controller;
 
 import com.example.homework2.Account;
+import com.example.homework2.Homework2Application;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.ArrayList;
+import java.util.List;
 
 @Controller
 public class UserController {
-    @RequestMapping("/login")
+    private List<Account> accountList= Homework2Application.accounts;
+    @GetMapping("/login")
     public String login(Model model){
-        return "login";
+        return "/login";
     }
-    @RequestMapping(value = "/wrong")
-    public String wrong(@ModelAttribute Account account, Model model){
-        model.addAttribute("acc", account);
-        if(account.getEmail().equals("trunghoa2k4@gmail.com") && account.getPassword().equals("123456"))
-            return "redirect:wellcome";
-        else
-            return "wrong";
+    @PostMapping("/login")
+    public String login(@ModelAttribute Account account, Model model){
+        boolean exist=false;
+        for(Account a : accountList) {
+            if(a.getEmail().equals(account.getEmail()) && a.getPassword().equals(account.getPassword())) exist=true;
+        }
+        if(exist) {
+            model.addAttribute("respone", "Account already exists!");
+            model.addAttribute("color", "red");
+            System.out.println("Account already exists!");
+        }
+        else {
+            accountList.add(account);
+            model.addAttribute("respone", "Sign up success!");
+            model.addAttribute("color", "green");
+            System.out.println("Sign up success!");
+        }
+        return ("/login");
     }
     @RequestMapping("/wellcome")
-    public String wellcome(Model model){
-        String name="Hòa";
-        model.addAttribute("name", name);
-        return "wellcome";
+    public String wellcome(@ModelAttribute Account account, Model model){
+        boolean exist=false;
+        for(Account a : accountList) {
+            if(a.getEmail().equals(account.getEmail()) && a.getPassword().equals(account.getPassword())) exist=true;
+        }
+        if(exist) {
+            model.addAttribute("list",accountList);
+            return "/wellcome";
+        }
+        else {
+            model.addAttribute("back","Wrong email or password!");
+            return "/login";
+        }
+    }
+    @GetMapping("/data")
+    public ResponseEntity<List<Account>> data(){
+        return ResponseEntity.ok().body(accountList);
     }
 }

@@ -78,12 +78,13 @@ public class UserController {
         for (Account a : accountList) {
             if (a.getEmail().equals(account.getEmail()) && a.getPassword().equals(account.getPassword())) exist = true;
         }
-        if (exist) {
+        if (!same) {
+            throw new PasswordNotMatchException("Mật khẩu nhập lại không khớp!");
+        }
+        else if (exist) {
             throw new AlreadyExistException("Tài khoản đã tồn tại");
         }
-        else if (!same) {
-            throw new PasswordNotMatchException("Mật khẩu nhập lại không khớp!");
-        } else {
+        else {
             accountList.add(account);
         }
         return ResponseEntity.ok().body(accountList);
@@ -103,7 +104,7 @@ public class UserController {
         throw  new IndexOutOfBoundsException("Không tìm thấy id "+ id);
     }
     @DeleteMapping("/acc/deleteAcc/{id}")
-    public ResponseEntity<?> deleteUser(@PathVariable int id) {
+    public ResponseEntity<?> deleteAcc(@PathVariable int id) {
         Account u = accountList.get(id);
         if(accountList.contains(u)){
             accountList.remove(id);

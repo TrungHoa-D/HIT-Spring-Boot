@@ -1,7 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="09bd7cfb-4f16-4e88-9c50-1f798495b7cf" name="Changes" comment="" />
+    <list default="true" id="dc87cbaf-b74b-4132-9559-ecb3595904f2" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/HIT-Spring Boot.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Homework/src/main/java/Week1/Kimono.java" beforeDir="false" afterPath="$PROJECT_DIR$/Homework/src/main/java/Week1/Kimono.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Homework/src/main/java/Week1/Mohican.java" beforeDir="false" afterPath="$PROJECT_DIR$/Homework/src/main/java/Week1/Mohican.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Homework/src/main/java/Week1/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/Homework/src/main/java/Week1/Person.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Homework/src/main/java/Week1/Undercut.java" beforeDir="false" afterPath="$PROJECT_DIR$/Homework/src/main/java/Week1/Undercut.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Homework/src/main/java/Week1/Vest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Homework/src/main/java/Week1/Vest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Homework/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Homework/src/main/resources/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Homework2/src/main/java/com/example/homework2/Homework2Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/Homework2/src/main/java/com/example/homework2/Homework2Application.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Homework2/src/main/java/com/example/homework2/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Homework2/src/main/java/com/example/homework2/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Homework2/src/main/resources/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/Homework2/src/main/resources/templates/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Homework2/src/main/resources/templates/wellcome.html" beforeDir="false" afterPath="$PROJECT_DIR$/Homework2/src/main/resources/templates/wellcome.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Homework2/src/main/resources/templates/wrong.html" beforeDir="false" afterPath="$PROJECT_DIR$/Homework2/src/main/resources/templates/wrong.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lesson3/src/main/java/com/example/lesson3/controller/TestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lesson3/src/main/java/com/example/lesson3/controller/TestController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lesson3/src/main/resources/templates/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/Lesson3/src/main/resources/templates/about.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lesson3/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Lesson3/src/main/resources/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesson2/src/main/java/com/example/lesson2/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/lesson2/src/main/java/com/example/lesson2/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesson2/src/main/resources/templates/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/lesson2/src/main/resources/templates/about.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesson2/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/lesson2/src/main/resources/templates/index.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -10,34 +37,29 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="MarkdownSettingsMigration">
-    <option name="stateVersion" value="1" />
-  </component>
-  <component name="ProjectColorInfo">{
-  &quot;customColor&quot;: &quot;&quot;,
-  &quot;associatedIndex&quot;: 5
-}</component>
-  <component name="ProjectId" id="2e777SCdDfntfaduaU5s8z1dmMx" />
+  <component name="ProjectId" id="2f4aSsL6yC8JIUCtmoMvKwVYesq" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;
-  }
-}</component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="09bd7cfb-4f16-4e88-9c50-1f798495b7cf" name="Changes" comment="" />
-      <created>1711243595851</created>
+      <changelist id="dc87cbaf-b74b-4132-9559-ecb3595904f2" name="Changes" comment="" />
+      <created>1713062812485</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1711243595851</updated>
+      <updated>1713062812485</updated>
+      <workItem from="1713062815304" duration="59000" />
     </task>
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
 </project>

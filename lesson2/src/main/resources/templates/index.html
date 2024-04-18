@@ -6,14 +6,14 @@
 
 </head>
 <body>
-    <div th:each="u : ${userList}">
-        <h1 style="display: inline-block" th:text="*{u.getName()}"></h1>
-        <h1 style="display: inline-block" th:text="*{u.getAge()}"></h1>
-    </div>
-    <form th:action="@{/about}">
-        <input name="name" type="text">
-        <input name="age" type="text">
-        <input type="submit" value="submit">
-    </form>
+<div th:each="u : ${userList}">
+    <h1 style="display: inline-block" th:text="*{u.getName()}"></h1>
+    <h1 style="display: inline-block" th:text="*{u.getAge()}"></h1>
+</div>
+<form th:action="@{/about}">
+    <input name="name" type="text">
+    <input name="age" type="text">
+    <input type="submit" value="submit">
+</form>
 </body>
 </html>

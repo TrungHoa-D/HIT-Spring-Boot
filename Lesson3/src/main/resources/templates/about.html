@@ -5,11 +5,11 @@
     <title>Title</title>
 </head>
 <body>
-    <div th:each="c:${list}">
-        <h1 th:text="*{c.getName()}"></h1>
-    </div>
-    <form th:action="@{data}">
-        <button type="submit"> go</button>
-    </form>
+<div th:each="c:${list}">
+    <h1 th:text="*{c.getName()}"></h1>
+</div>
+<form th:action="@{data}">
+    <button type="submit"> go</button>
+</form>
 </body>
 </html>

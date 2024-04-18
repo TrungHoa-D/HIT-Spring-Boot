@@ -10,6 +10,7 @@ public class Person {
 
     public Person() {
     }
+
     @Autowired
     public Person(Outfit outfit, HairStyle hairStyle) {
         this.outfit = outfit;

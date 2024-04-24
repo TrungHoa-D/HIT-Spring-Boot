@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        html,
+        body {
+            height: 100%;
+        }
+
+        body {
+            margin: 0;
+            background: linear-gradient(45deg, #49a09d, #5f2c82);
+            font-family: sans-serif;
+            font-weight: 100;
+        }
+
+        .container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        button {
+            width: fit-content;
+            height: 40px;
+            margin: 10px;
+            justify-content: center;
+            display: block;
+            color: #fff;
+            background: #573b8a;
+            font-size: 1em;
+            font-weight: bold;
+            outline: none;
+            border: none;
+            border-radius: 5px;
+            transition: .2s ease-in;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #6d44b8;
+        }
+
+        table {
+            width: max-content;
+            border-collapse: collapse;
+            overflow: hidden;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+
+        th,
+        td {
+            padding: 15px;
+            background-color: rgba(255, 255, 255, 0.2);
+            color: #fff;
+        }
+
+        th {
+            text-align: center;
+        }
+
+        thead th {
+            background-color: #55608f;
+        }
+
+        tbody tr:hover {
+            background-color: rgba(255, 255, 255, 0.3);
+        }
+
+        tbody td {
+            position: relative;
+        }
+
+        tbody td:hover:before {
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: -9999px;
+            bottom: -9999px;
+            background-color: rgba(255, 255, 255, 0.2);
+            z-index: -1;
+        }
+        input {
+            width: 60%;
+            height: 20px;
+            background: #e0dede;
+            justify-content: center;
+            display: flex;
+            margin: 10px 0px;
+            padding: 10px;
+            border: none;
+            outline: none;
+            border-radius: 5px;
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1 style="color: white; text-align: center">DANH SÁCH TÀI KHOẢN</h1>
+    <form style="display: flex" th:action="@{find}">
+        <input type="text" name="name" placeholder="Nhập tên account cần tìm" >
+        <button type="submit">Tìm</button>
+    </form>
+    <table>
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>Account</th>
+            <th>Password</th>
+            <th>Email</th>
+            <th>Create day</th>
+            <th>Edit day</th>
+            <th colspan="2">Action</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="a:${list}">
+            <td th:text="*{a.getId()}"></td>
+            <td th:text="*{a.getName()}"></td>
+            <td th:text="*{a.getPassword()}"></td>
+            <td th:text="*{a.getEmail()}"></td>
+            <td th:text="*{a.getTimeCreate()}"></td>
+            <td th:text="*{a.getTimeEdit()}"></td>
+            <td>
+                <form th:action="@{edit}">
+                    <input style="display: none" name="id" th:value="*{a.getId()}">
+                    <button style="background-color: forestgreen" type="submit">Chỉnh sửa</button>
+                </form>
+            </td>
+            <td>
+                <form th:action="@{delete}">
+                    <input style="display: none" name="id" th:value="*{a.getId()}">
+                    <button style="background-color: crimson" type="submit">Xóa</button>
+                </form>
+            </td>
+
+        </tr>
+        </tbody>
+    </table>
+    <form style="display: inline-block" th:action="@{getAcc}">
+        <button type="submit">Xem dữ liệu tài khoản</button>
+    </form>
+    <form style="display: inline-block" th:action="@{signout}">
+        <button type="submit">Đăng xuất</button>
+    </form>
+</div>
+</body>
+</html>
